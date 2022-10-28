@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    "schedule:weekly"
+  ],
+  "enabledManagers": [
+    "github-actions",
+    "gradle",
+    "gradle-wrapper"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "Minor Updates",
+      "labels": [
+        "minor"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "Major Updates",
+      "labels": [
+        "major"
+      ]
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "GitHub Actions"
+    }
+  ]
+}
