@@ -95,5 +95,5 @@ jar {
 }
 
 wrapper {
-    gradleVersion = '4.7'
+    gradleVersion = '6.9.4'
 }
